@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: "2021-08-31T18:09:37Z"
+    generation: 1
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/generated-by: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+      manager: oc
+      operation: Update
+      time: "2021-08-31T18:09:37Z"
+    name: quotesapi
+    namespace: bnipfw-quotes-dev
+    resourceVersion: "184255524"
+    selfLink: /apis/image.openshift.io/v1/namespaces/bnipfw-quotes-dev/imagestreams/quotesapi
+    uid: e3deaa61-3fc8-490f-abe2-c14c5715c94b
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/bnipfw-quotes-dev/quotesapi
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.ap45.prod.nextcle.com/bnipfw-quotes-dev/quotesapi
+    tags:
+    - items:
+      - created: "2021-08-31T18:10:12Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/bnipfw-quotes-dev/quotesapi@sha256:2a91e0967d9a6a89d20688b17ba8454bf5856bad5ce872f45b00cbf7ff1e7016
+        generation: 1
+        image: sha256:2a91e0967d9a6a89d20688b17ba8454bf5856bad5ce872f45b00cbf7ff1e7016
+      tag: latest
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: "2021-08-31T18:09:28Z"
+    creationTimestamp: "2021-08-31T18:09:28Z"
+    generation: 2
+    name: quotesdb
+    namespace: bnipfw-quotes-dev
+    resourceVersion: "184255128"
+    selfLink: /apis/image.openshift.io/v1/namespaces/bnipfw-quotes-dev/imagestreams/quotesdb
+    uid: ce6661cf-0a9c-432c-838d-b399ff6bec1e
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+      generation: 2
+      importPolicy: {}
+      name: "5.7"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/bnipfw-quotes-dev/quotesdb
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.ap45.prod.nextcle.com/bnipfw-quotes-dev/quotesdb
+    tags:
+    - items:
+      - created: "2021-08-31T18:09:28Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+        generation: 2
+        image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+      tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

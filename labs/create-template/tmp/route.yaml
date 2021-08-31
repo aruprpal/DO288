@@ -1,0 +1,70 @@
+apiVersion: v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2021-08-31T18:10:22Z"
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+        f:spec:
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: oc
+      operation: Update
+      time: "2021-08-31T18:10:22Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      time: "2021-08-31T18:10:22Z"
+    name: quotesapi
+    namespace: bnipfw-quotes-dev
+    resourceVersion: "184255642"
+    selfLink: /apis/route.openshift.io/v1/namespaces/bnipfw-quotes-dev/routes/quotesapi
+    uid: a125bcb2-42b5-4a2b-a61e-1aa596fa2ab0
+  spec:
+    host: quotesapi-bnipfw-quotes-dev.apps.ap45.prod.nextcle.com
+    port:
+      targetPort: 8080-tcp
+    to:
+      kind: Service
+      name: quotesapi
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2021-08-31T18:10:22Z"
+        status: "True"
+        type: Admitted
+      host: quotesapi-bnipfw-quotes-dev.apps.ap45.prod.nextcle.com
+      routerCanonicalHostname: apps.ap45.prod.nextcle.com
+      routerName: default
+      wildcardPolicy: None
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
