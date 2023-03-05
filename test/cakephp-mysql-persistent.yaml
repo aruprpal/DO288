@@ -26,7 +26,6 @@ metadata:
   labels:
     samples.operator.openshift.io/managed: "true"
   name: cakephp-mysql-persistent
-  namespace: openshift
   resourceVersion: "26120"
   uid: 273930cc-849f-4c12-b6df-28ecfe698ae9
 objects:
